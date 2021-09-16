@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.Main_Activity"
+    >
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:openDrawer="start">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/titanium2"
+            android:fitsSystemWindows="true">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.AppBarLayout.PrimarySurface"
+                android:fitsSystemWindows="true">
+
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:title="Caçamba aluga"
+                    app:titleTextColor="@color/black"
+                    app:navigationIcon="@drawable/ic_baseline_menu_24"
+                    android:background="@color/titanium1"/>
+
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_margin="20dp">
+
+                        <!--com.beardedhen.androidbootstrap.BootstrapButton
+                            android:id="@+id/btnaluga"
+                            app:bootstrapBrand="primary"
+                            app:bootstrapSize="lg"
+                            app:bootstrapText="Alugar caçamba"
+                            android:drawableStart="@drawable/ic_carrinho_branco"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_width="match_parent"
+                            app:roundedCorners="true"/>
+
+                        <com.beardedhen.androidbootstrap.BootstrapButton
+                            android:id="@+id/btnchecar_aluguel"
+                            app:bootstrapBrand="primary"
+                            app:bootstrapSize="lg"
+                            app:bootstrapText="cacambas alugadas"
+                            android:drawableStart="@drawable/ic_cartao_branco"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_width="match_parent"
+                            app:roundedCorners="true"/>
+
+                        <com.beardedhen.androidbootstrap.BootstrapButton
+                            android:id="@+id/btncadastra_cacamba"
+                            app:bootstrapBrand="primary"
+                            app:bootstrapSize="lg"
+                            app:bootstrapText="Cadastrar Cacamba"
+                            android:drawableStart="@drawable/ic_livro_branco"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_width="match_parent"
+                            app:roundedCorners="true"/>-->
+
+                        <Button
+                            android:id="@+id/btn_aluga"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Alugar Caçamba"
+                            android:textSize="18dp"
+                            android:backgroundTint="#4040FF"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:layout_marginTop="15dp"
+                            />
+
+                        <Button
+                            android:id="@+id/btn_verifica_aluga"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAllCaps="false"
+                            android:textSize="18dp"
+                            android:textColor="@color/black"
+                            android:text="Caçambas Alugadas"
+                            android:backgroundTint="#4040ff"
+                            android:layout_marginTop="15dp"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+        <!--<com.google.android.material.navigation.NavigationView
+            android:id="@+id/view_navegation"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:headerLayout="@layout/layout_cabecalho"
+            app:menu="@menu/menu_pagina_principal"
+            />-->
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</LinearLayout>

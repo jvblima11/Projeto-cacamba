@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "423373176588",
+    "project_id": "projeto-cacamba",
+    "storage_bucket": "projeto-cacamba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:423373176588:android:c06a38a3baffa1818a1329",
+        "android_client_info": {
+          "package_name": "com.app.caambas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "423373176588-1oh2j0mbk2hft0li6ddhk7956mjv3aai.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSHCUYxYY4LlEMkTsQHGVDnANE65080X0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "423373176588-1oh2j0mbk2hft0li6ddhk7956mjv3aai.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

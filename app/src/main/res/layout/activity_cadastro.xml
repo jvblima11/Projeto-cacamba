@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/backgroud_cadastro"
+    tools:context=".Activity.Cadastro_Activity">
+
+  <LinearLayout
+      android:id="@+id/linearLayout"
+      android:layout_width="match_parent"
+      android:layout_height="35dp"
+      android:background="@color/titanium1"
+      tools:ignore="MissingConstraints">
+
+    <TextView
+        android:id="@+id/cadastro_de_usua"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="Cadrastro de Usuário"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+  </LinearLayout>
+
+  <TextView
+      android:layout_marginTop="15dp"
+      android:layout_marginLeft="15dp"
+      android:id="@+id/textView1"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Nome de Usuário:"
+      android:textColor="@color/white"
+      android:textSize="20dp"
+      app:layout_constraintStart_toStartOf="@+id/linearLayout"
+      app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+  <EditText
+      android:background="@drawable/backgroud_cadast"
+      android:id="@+id/editText1"
+      android:layout_width="match_parent"
+      android:layout_marginLeft="15dp"
+      android:layout_marginRight="15dp"
+      android:layout_height="wrap_content"
+      android:hint="  Nome de Usuário"
+      app:layout_constraintStart_toStartOf="@+id/linearLayout"
+      app:layout_constraintTop_toBottomOf="@+id/textView1"/>
+
+
+  <View
+      android:id="@+id/View1"
+      android:layout_width="match_parent"
+      android:layout_height="3dp"
+      android:background="@color/white"
+      android:layout_marginLeft="15dp"
+      android:layout_marginRight="15dp"
+      android:layout_marginTop="10dp"
+      android:layout_marginBottom="10dp"
+      app:layout_constraintStart_toStartOf="@+id/linearLayout"
+      app:layout_constraintTop_toBottomOf="@+id/editText1"/>
+
+  <TextView
+      android:layout_marginTop="15dp"
+      android:layout_marginLeft="15dp"
+      android:id="@+id/textView2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="CPF:"
+      android:textColor="@color/white"
+      android:textSize="20dp"
+      app:layout_constraintStart_toStartOf="@+id/linearLayout"
+      app:layout_constraintTop_toBottomOf="@+id/View1" />
+
+  <EditText
+      android:background="@drawable/backgroud_cadast"
+      android:id="@+id/editText2"
+      android:layout_width="match_parent"
+      android:layout_marginLeft="15dp"
+      android:layout_marginRight="15dp"
+      android:layout_height="wrap_content"
+      android:hint="  CPF"
+      app:layout_constraintStart_toStartOf="@+id/linearLayout"
+      app:layout_constraintTop_toBottomOf="@+id/textView2"/>
+
+  <View
+      android:id="@+id/View2"
+      android:layout_width="match_parent"
+      android:layout_height="3dp"
+      android:background="@color/white"
+      android:layout_marginLeft="15dp"
+      android:layout_marginRight="15dp"
+      android:layout_marginTop="10dp"
+      android:layout_marginBottom="10dp"
+      app:layout_constraintStart_toStartOf="@+id/linearLayout"
+      app:layout_constraintTop_toBottomOf="@+id/editText2"/>
+
+  <TextView
+      android:layout_marginTop="15dp"
+      android:layout_marginLeft="15dp"
+      android:id="@+id/textView3"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Email:"
+      android:textColor="@color/white"
+      android:textSize="20dp"
+      app:layout_constraintStart_toStartOf="@+id/linearLayout"
+      app:layout_constraintTop_toBottomOf="@+id/flexbox1" />
+
+  <EditText
+      android:background="@drawable/backgroud_cadast"
+      android:id="@+id/editText3"
+      android:layout_width="match_parent"
+      android:layout_marginLeft="15dp"
+      android:layout_marginRight="15dp"
+      android:layout_height="wrap_content"
+      android:hint="  Email"
+      app:layout_constraintStart_toStartOf="@+id/linearLayout"
+      app:layout_constraintTop_toBottomOf="@+id/textView3"/>
+
+  <View
+      android:id="@+id/View3"
+      android:layout_width="match_parent"
+      android:layout_height="3dp"
+      android:background="@color/white"
+      android:layout_marginLeft="15dp"
+      android:layout_marginRight="15dp"
+      android:layout_marginTop="10dp"
+      android:layout_marginBottom="10dp"
+      app:layout_constraintStart_toStartOf="@+id/linearLayout"
+      app:layout_constraintTop_toBottomOf="@+id/editText3"/>
+
+  <TextView
+      android:layout_marginTop="15dp"
+      android:layout_marginLeft="15dp"
+      android:id="@+id/textView4"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Senha:"
+      android:textColor="@color/white"
+      android:textSize="20dp"
+      app:layout_constraintStart_toStartOf="@+id/linearLayout"
+      app:layout_constraintTop_toBottomOf="@+id/View3" />
+
+  <EditText
+      android:background="@drawable/backgroud_cadast"
+      android:id="@+id/editText4"
+      android:layout_width="match_parent"
+      android:layout_marginLeft="15dp"
+      android:layout_marginRight="15dp"
+      android:layout_height="wrap_content"
+      android:hint="  Senha"
+      app:layout_constraintStart_toStartOf="@+id/linearLayout"
+      app:layout_constraintTop_toBottomOf="@+id/textView4"/>
+
+  <View
+      android:id="@+id/View4"
+      android:layout_width="match_parent"
+      android:layout_height="3dp"
+      android:background="@color/white"
+      android:layout_marginLeft="15dp"
+      android:layout_marginRight="15dp"
+      android:layout_marginTop="10dp"
+      android:layout_marginBottom="10dp"
+      app:layout_constraintStart_toStartOf="@+id/linearLayout"
+      app:layout_constraintTop_toBottomOf="@+id/editText4"/>
+
+  <TextView
+      android:layout_marginTop="15dp"
+      android:layout_marginLeft="15dp"
+      android:id="@+id/textView5"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Confirmar Senha:"
+      android:textColor="@color/white"
+      android:textSize="20dp"
+      app:layout_constraintStart_toStartOf="@+id/linearLayout"
+      app:layout_constraintTop_toBottomOf="@+id/View4" />
+
+  <EditText
+      android:background="@drawable/backgroud_cadast"
+      android:id="@+id/editText5"
+      android:layout_width="match_parent"
+      android:layout_marginLeft="15dp"
+      android:layout_marginRight="15dp"
+      android:layout_height="wrap_content"
+      android:hint="  Confirmar Senha:"
+      app:layout_constraintStart_toStartOf="@+id/linearLayout"
+      app:layout_constraintTop_toBottomOf="@+id/textView5"/>
+
+  <View
+      android:id="@+id/View5"
+      android:layout_width="match_parent"
+      android:layout_height="3dp"
+      android:background="@color/white"
+      android:layout_marginLeft="15dp"
+      android:layout_marginRight="15dp"
+      android:layout_marginTop="10dp"
+      android:layout_marginBottom="10dp"
+      app:layout_constraintStart_toStartOf="@+id/linearLayout"
+      app:layout_constraintTop_toBottomOf="@+id/editText5"/>
+
+  <com.google.android.flexbox.FlexboxLayout
+      android:id="@+id/flexbox1"
+      android:layout_width="match_parent"
+      android:layout_height="75dp"
+      android:layout_marginLeft="15dp"
+      android:layout_marginRight="15dp"
+      app:layout_constraintBottom_toTopOf="@id/View2"
+      app:layout_constraintStart_toStartOf="@id/linearLayout"
+      app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:justifyContent="space_evenly"
+        app:flexDirection="row">
+
+      <com.google.android.flexbox.FlexboxLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+        app:flexDirection="column">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="Telefone Celular: "
+            android:textSize="16sp"
+            android:textColor="@color/white"/>
+
+        <EditText
+            android:background="@drawable/backgroud_cadast"
+            android:hint=" DDD999999999 "
+            android:id="@+id/edtPhone"
+            android:inputType="phone"
+            android:maxLength="12"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:padding="5dp"/>
+
+      </com.google.android.flexbox.FlexboxLayout>
+
+      <com.google.android.flexbox.FlexboxLayout
+          app:flexDirection="column"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="Cidade: "
+            android:textSize="16sp"
+            android:textColor="@color/white"/>
+
+        <Spinner
+            android:id="@+id/spinnerGenero"
+            app:layout_alignSelf="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+      </com.google.android.flexbox.FlexboxLayout>
+
+    </com.google.android.flexbox.FlexboxLayout>
+
+  </com.google.android.flexbox.FlexboxLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

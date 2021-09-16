@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background_main">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/esqueci_cabecalho"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="Inserir Email"
+            android:textColor="@color/black"
+            android:textSize="29dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/esqueci_email"
+        style="@style/edit_tex"
+        android:drawableRight="@drawable/ic_password"
+        android:text=" Senha"
+        android:textSize="19dp"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="20dp"/>
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/esqueci_email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp">
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:flexDirection="row"
+
+            app:justifyContent="space_between">
+
+            <com.beardedhen.androidbootstrap.BootstrapButton
+                android:id="@+id/btn_esqueci_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:bootstrapBrand="danger"
+                app:bootstrapSize="md"
+                app:bootstrapText="Cancelar"
+                app:roundedCorners="true" />
+
+            <com.beardedhen.androidbootstrap.BootstrapButton
+                android:id="@+id/btn_esqueci_confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:bootstrapBrand="success"
+                app:bootstrapSize="md"
+                app:bootstrapText="Confirmar"
+                app:roundedCorners="true" />
+        </com.google.android.flexbox.FlexboxLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
