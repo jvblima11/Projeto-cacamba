@@ -15,8 +15,9 @@ import lombok.Setter;
 public class Users {
     public static Users usuariologado;
     String nome;
+    String numero;
     String cpf;
-    String cidade;
+
 
     public static void setUsuariologado(Users usuario){
         usuariologado = usuario;
