@@ -48,7 +48,6 @@ public class Login_Activity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         banco = Banco.getBanco();
-        banco.child("teste").setValue("funciona");
         Toast.makeText(this, banco.getRoot().toString(), Toast.LENGTH_SHORT).show();
 
         btnEntrar = findViewById(R.id.btnEntrar);
