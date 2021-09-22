@@ -42,7 +42,6 @@ public class Login_Activity extends AppCompatActivity {
     private DatabaseReference banco;
     private FirebaseAuth autenticacao;
     private android.app.AlertDialog loading;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
