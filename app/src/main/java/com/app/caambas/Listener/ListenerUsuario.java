@@ -1,7 +1,8 @@
 package com.app.caambas.Listener;
 
-import com.google.firebase.firestore.auth.User;
+
+import com.app.caambas.Class.Users;
 
 public interface ListenerUsuario {
-    void sucesso(User usuario);
+    void sucesso(Users usuario);
 }

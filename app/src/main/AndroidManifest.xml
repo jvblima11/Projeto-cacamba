@@ -6,7 +6,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/cacamba_login"
+        android:icon="@mipmap/ic_round_icon_round"
         android:label="Caçamba aluga"
         android:roundIcon="@drawable/ic_launcher_background"
         android:supportsRtl="true"

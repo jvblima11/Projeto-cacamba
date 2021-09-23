@@ -5,6 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="5dp"
     android:orientation="vertical"
     android:background="@drawable/backgroud_cadastro"
     tools:context=".Activity.Cadastro_Activity">
@@ -47,6 +48,7 @@
       android:layout_marginRight="15dp"
       android:layout_height="wrap_content"
       android:hint="  Nome de Usuário"
+      android:padding="5dp"
       app:layout_constraintStart_toStartOf="@+id/linearLayout"
       app:layout_constraintTop_toBottomOf="@+id/textView1"/>
 
@@ -82,6 +84,7 @@
       android:layout_marginLeft="15dp"
       android:layout_marginRight="15dp"
       android:layout_height="wrap_content"
+      android:padding="5dp"
       android:hint="  CPF"
       app:layout_constraintStart_toStartOf="@+id/linearLayout"
       app:layout_constraintTop_toBottomOf="@+id/textView2"/>
@@ -117,6 +120,7 @@
       android:layout_marginLeft="15dp"
       android:layout_marginRight="15dp"
       android:layout_height="wrap_content"
+      android:padding="5dp"
       android:hint="  Email"
       app:layout_constraintStart_toStartOf="@+id/linearLayout"
       app:layout_constraintTop_toBottomOf="@+id/textView3"/>
@@ -153,6 +157,7 @@
       android:layout_marginRight="15dp"
       android:layout_height="wrap_content"
       android:hint="  Senha"
+      android:padding="5dp"
       app:layout_constraintStart_toStartOf="@+id/linearLayout"
       app:layout_constraintTop_toBottomOf="@+id/textView4"/>
 
@@ -188,6 +193,7 @@
       android:layout_marginRight="15dp"
       android:layout_height="wrap_content"
       android:hint="  Confirmar Senha:"
+      android:padding="5dp"
       app:layout_constraintStart_toStartOf="@+id/linearLayout"
       app:layout_constraintTop_toBottomOf="@+id/textView5"/>
 
@@ -206,7 +212,7 @@
   <com.google.android.flexbox.FlexboxLayout
       android:id="@+id/flexbox1"
       android:layout_width="match_parent"
-      android:layout_height="75dp"
+      android:layout_height="wrap_content"
       android:layout_marginLeft="15dp"
       android:layout_marginRight="15dp"
       app:layout_constraintBottom_toTopOf="@id/View2"
@@ -222,7 +228,7 @@
       <com.google.android.flexbox.FlexboxLayout
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-        app:flexDirection="column">
+        app:flexDirection="row">
 
         <TextView
             android:layout_width="wrap_content"
@@ -249,19 +255,19 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="5dp"
-            android:text="Cidade: "
-            android:textSize="16sp"
-            android:textColor="@color/white"/>
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:padding="5dp"-->
+<!--            android:text="Cidade: "-->
+<!--            android:textSize="16sp"-->
+<!--            android:textColor="@color/white"/>-->
 
-        <Spinner
-            android:id="@+id/spinnerGenero"
-            app:layout_alignSelf="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+<!--        <Spinner-->
+<!--            android:id="@+id/spinnerLoc"-->
+<!--            app:layout_alignSelf="center"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content" />-->
 
       </com.google.android.flexbox.FlexboxLayout>
 
@@ -269,4 +275,35 @@
 
   </com.google.android.flexbox.FlexboxLayout>
 
+  <com.google.android.flexbox.FlexboxLayout
+      app:flexDirection="row"
+      app:justifyContent="space_evenly"
+      android:layout_height="wrap_content"
+      android:layout_width="match_parent"
+      app:layout_constraintStart_toStartOf="@id/View5"
+      app:layout_constraintEnd_toEndOf="@id/View5"
+      app:layout_constraintTop_toBottomOf="@id/View5"
+      android:layout_marginTop="25dp"
+      >
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        app:bootstrapBrand="danger"
+        app:bootstrapSize="md"
+        app:bootstrapText="Cancelar"
+        android:id="@+id/btnCadastrarCancel"
+        android:layout_marginBottom="20dp"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:roundedCorners="true"/>
+
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        app:bootstrapBrand="success"
+        app:bootstrapSize="md"
+        app:bootstrapText="Confirmar"
+        android:id="@+id/btnCadastrarConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:roundedCorners="true"/>
+
+  </com.google.android.flexbox.FlexboxLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

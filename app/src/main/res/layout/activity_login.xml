@@ -30,11 +30,11 @@
     <EditText
         android:id="@+id/user_text"
         style="@style/edit_tex"
-        android:text="Email"
+        android:hint="Email"
         android:drawableRight="@drawable/ic_mail"
         android:layout_width="330dp"
         android:layout_height="60dp"
-        android:textStyle="bold"
+        android:textColorHint="@color/black"
         app:layout_constraintStart_toStartOf="@id/container"
         app:layout_constraintEnd_toEndOf="@id/container"
         app:layout_constraintTop_toTopOf="@id/container"/>
@@ -42,11 +42,11 @@
     <EditText
         android:id="@+id/password_text"
         style="@style/edit_tex"
-        android:text="Senha"
-        android:textStyle="bold"
+        android:hint="Senha"
         android:drawableRight="@drawable/ic_password"
         android:layout_width="330dp"
         android:layout_height="60dp"
+        android:textColorHint="@color/black"
         app:layout_constraintStart_toStartOf="@id/container"
         app:layout_constraintEnd_toEndOf="@id/container"
         app:layout_constraintTop_toBottomOf="@id/user_text"/>

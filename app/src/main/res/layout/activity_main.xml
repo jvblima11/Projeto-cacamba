@@ -121,14 +121,14 @@
 
         </LinearLayout>
 
-        <!--<com.google.android.material.navigation.NavigationView
-            android:id="@+id/view_navegation"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="start"
-            app:headerLayout="@layout/layout_cabecalho"
-            app:menu="@menu/menu_pagina_principal"
-            />-->
+<!--        <com.google.android.material.navigation.NavigationView-->
+<!--            android:id="@+id/barra_navegacao"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_gravity="start"-->
+<!--            app:headerLayout="@layout/layout_cabecalho"-->
+<!--            app:menu="@menu/menu_pagina_principal"-->
+<!--            />-->
 
     </androidx.drawerlayout.widget.DrawerLayout>
 

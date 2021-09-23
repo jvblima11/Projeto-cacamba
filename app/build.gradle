@@ -40,8 +40,8 @@ dependencies {
     implementation platform('com.google.firebase:firebase-bom:28.4.0')
     //Authentication
     implementation 'com.google.firebase:firebase-auth'
-    //Cloud Firestore
-    implementation 'com.google.firebase:firebase-firestore'
+    //Real time database
+    implementation "com.google.firebase:firebase-database:20.0.2"
 
     //BootsTrap
     implementation 'com.beardedhen:androidbootstrap:2.3.2'
@@ -52,6 +52,7 @@ dependencies {
 
     // FlexBoxLayout
     implementation 'com.google.android.flexbox:flexbox:3.0.0'
+
     implementation 'com.google.firebase:firebase-database:20.0.1'
     implementation 'com.google.firebase:firebase-common-ktx:20.0.0'
 
