@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.app.caambas">
+    package="com.app.caambas" >
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -10,23 +10,26 @@
         android:label="Caçamba aluga"
         android:roundIcon="@drawable/ic_launcher_background"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Caçambas">
-
+        android:theme="@style/Theme.Caçambas" >
+        <activity
+            android:name=".Activity.Verifica_Activity"
+            android:parentActivityName=".Activity.Main_Activity" />
+        <activity
+            android:name=".Activity.Aluga_Activity"
+            android:parentActivityName=".Activity.Main_Activity" />
         <activity
             android:name=".Activity.Main_Activity"
-            android:parentActivityName=".Activity.Login_Activity"/>
+            android:parentActivityName=".Activity.Login_Activity" />
         <activity
             android:name=".Activity.Cadastro_Activity"
-            android:parentActivityName=".Activity.Login_Activity"/>
+            android:parentActivityName=".Activity.Login_Activity" />
+        <activity android:name=".Activity.Login_Activity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-    <activity android:name=".Activity.Login_Activity">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-    </activity>
-
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

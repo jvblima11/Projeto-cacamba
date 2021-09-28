@@ -56,39 +56,6 @@
                         android:orientation="vertical"
                         android:layout_margin="20dp">
 
-                        <!--com.beardedhen.androidbootstrap.BootstrapButton
-                            android:id="@+id/btnaluga"
-                            app:bootstrapBrand="primary"
-                            app:bootstrapSize="lg"
-                            app:bootstrapText="Alugar caçamba"
-                            android:drawableStart="@drawable/ic_carrinho_branco"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="20dp"
-                            android:layout_width="match_parent"
-                            app:roundedCorners="true"/>
-
-                        <com.beardedhen.androidbootstrap.BootstrapButton
-                            android:id="@+id/btnchecar_aluguel"
-                            app:bootstrapBrand="primary"
-                            app:bootstrapSize="lg"
-                            app:bootstrapText="cacambas alugadas"
-                            android:drawableStart="@drawable/ic_cartao_branco"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="20dp"
-                            android:layout_width="match_parent"
-                            app:roundedCorners="true"/>
-
-                        <com.beardedhen.androidbootstrap.BootstrapButton
-                            android:id="@+id/btncadastra_cacamba"
-                            app:bootstrapBrand="primary"
-                            app:bootstrapSize="lg"
-                            app:bootstrapText="Cadastrar Cacamba"
-                            android:drawableStart="@drawable/ic_livro_branco"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="20dp"
-                            android:layout_width="match_parent"
-                            app:roundedCorners="true"/>-->
-
                         <Button
                             android:id="@+id/btn_aluga"
                             android:layout_width="match_parent"
@@ -121,14 +88,14 @@
 
         </LinearLayout>
 
-<!--        <com.google.android.material.navigation.NavigationView-->
-<!--            android:id="@+id/barra_navegacao"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:layout_gravity="start"-->
-<!--            app:headerLayout="@layout/layout_cabecalho"-->
-<!--            app:menu="@menu/menu_pagina_principal"-->
-<!--            />-->
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/barra_navegacao"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:headerLayout="@layout/tela_esquerda"
+            app:menu="@menu/menu_pagina_principal"
+            />
 
     </androidx.drawerlayout.widget.DrawerLayout>
 

@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -118,6 +119,7 @@ public class Login_Activity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        Log.d("facil", "onResume:  ");
         limparCampos();
         verificarUsuarioLogado();
     }
@@ -142,7 +144,9 @@ public class Login_Activity extends AppCompatActivity {
                 FirebaseUser usuariaLogado = Banco.getUsuarioLogado();
                 if(usuariaLogado != null){
                     if(usuariaLogado.isEmailVerified()){
+                        Log.d("facil", "autenticaUsuario: ");
                         recuperarUsuario();
+
                     }
                     else{
                         loading.dismiss();
@@ -157,11 +161,13 @@ public class Login_Activity extends AppCompatActivity {
     private void recuperarUsuario(){
         String idUsuario = Banco.getIdUsuarioLogado();
         if(idUsuario != null){
-            DatabaseReference usuarioReference = banco.child("usuarios").child(idUsuario);
+            DatabaseReference usuarioReference = banco.child("users").child(idUsuario);
             usuarioReference.addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    Log.d("facil", "datachanged: ");
                     if(snapshot.exists()){
+                        Log.d("facil", "existe: ");
                         Users users = snapshot.getValue(Users.class);
                         Users.setUsuariologado(users);
                         loading.dismiss();

@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroud_cadastro"
+    tools:context=".Activity.Aluga_Activity">
+
+
+    <EditText
+        style="@style/edit_aluga"
+        android:id="@+id/edt_rua"
+        android:layout_width="240dp"
+        android:layout_height="60dp"
+        android:hint="Rua"
+        android:layout_marginLeft="10dp"
+        android:textColorHint="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <EditText
+        style="@style/edit_aluga"
+        android:id="@+id/edt_num"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:hint="Nº"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/edt_rua"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtDeBairro"
+        style="@style/edit_aluga"
+        android:layout_width="195dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="10dp"
+        android:hint="Bairro"
+        android:textColorHint="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edt_rua" />
+
+    <EditText
+        android:id="@+id/edtCidade"
+        style="@style/edit_aluga"
+        android:layout_width="195dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="5dp"
+        android:hint="Cidade"
+        android:textColorHint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/edtDeBairro"
+        app:layout_constraintTop_toBottomOf="@id/edt_num" />
+
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/flexboxLayout"
+        android:layout_width="380dp"
+        android:layout_height="60dp"
+        android:layout_margin="20dp"
+        app:alignContent="center"
+        app:alignItems="center"
+        app:flexDirection="row"
+        app:justifyContent="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtDeBairro">
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:alignContent="center"
+            app:alignItems="center"
+            app:flexDirection="column"
+            app:justifyContent="space_evenly">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dia da entrega:"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <com.beardedhen.androidbootstrap.BootstrapButton
+                android:id="@+id/bts_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/titanium1"
+                app:bootstrapSize="md"
+                app:bootstrapText="dd/MM/yyyy"
+                app:roundedCorners="true" />
+
+        </com.google.android.flexbox.FlexboxLayout>
+
+    </com.google.android.flexbox.FlexboxLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:id="@+id/aluga_view1"
+        android:layout_marginTop="20dp"
+        android:layout_height="3dp"
+        android:background="@color/titanium1"
+        app:layout_constraintTop_toBottomOf="@+id/flexboxLayout"/>
+
+    <TextView
+        android:id="@+id/txt_tamanho"
+        android:layout_width="match_parent"
+        android:text="Escolher tamanho da caçamba:"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/aluga_view1" />
+
+    <View
+        android:id="@+id/aluga_view2"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/titanium1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_tamanho" />
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_width="match_parent"
+        android:id="@+id/flexbox2"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+        app:alignContent="center"
+        app:alignItems="center"
+        app:flexDirection="row"
+        app:justifyContent="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/aluga_view2">
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:flexDirection="row"
+            app:justifyContent="space_evenly">
+
+            <RadioButton
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/rb_tam4"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:buttonTint="@color/titanium1"
+                android:text="4 m³"/>
+
+            <RadioButton
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/rb_tam5"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:buttonTint="@color/titanium1"
+                android:text="5 m³"/>
+
+            <RadioButton
+                android:textSize="18dp"
+                android:layout_width="100dp"
+                android:buttonTint="@color/titanium1"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:id="@+id/rb_tam7"
+                android:text="7 m³"/>
+
+        </com.google.android.flexbox.FlexboxLayout>
+
+    </com.google.android.flexbox.FlexboxLayout>
+
+
+    <View
+        android:id="@+id/aluga_view3"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/titanium1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/flexbox2" />
+
+    <View
+        android:layout_width="match_parent"
+        android:id="@+id/aluga_view4"
+        android:layout_marginTop="10dp"
+        android:layout_height="3dp"
+        android:background="@color/titanium1"
+        app:layout_constraintTop_toBottomOf="@+id/txtPreco"/>
+
+    <TextView
+        android:id="@+id/txt_valor"
+        android:layout_width="match_parent"
+        android:text="Valor do Pagamento:"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/flexbox2" />
+
+    <TextView
+        android:layout_width="160dp"
+        android:background="@drawable/preco_cacamba"
+        android:id="@+id/txtPreco"
+        android:layout_height="50dp"
+        android:padding="3dp"
+        android:layout_marginTop="10dp"
+        android:hint="R$"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/txt_valor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/txt_metodo"
+        android:layout_width="match_parent"
+        android:text="Metodo de pagamento:"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/aluga_view4" />
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_width="match_parent"
+        android:id="@+id/flexbox3"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+        app:alignContent="center"
+        app:alignItems="center"
+        app:flexDirection="row"
+        app:justifyContent="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_metodo">
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:flexDirection="row"
+            app:justifyContent="space_evenly">
+
+            <RadioButton
+                android:id="@+id/rbDinheiro"
+                android:textSize="18dp"
+                android:layout_width="100dp"
+                android:buttonTint="@color/titanium1"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Dinheiro"/>
+
+            <RadioButton
+                android:id="@+id/rbDebito"
+                android:textSize="18dp"
+                android:layout_width="100dp"
+                android:buttonTint="@color/titanium1"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Debito"/>
+
+            <RadioButton
+                android:id="@+id/rbCredito"
+                android:textSize="18dp"
+                android:layout_width="100dp"
+                android:buttonTint="@color/titanium1"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Credito"/>
+
+        </com.google.android.flexbox.FlexboxLayout>
+
+    </com.google.android.flexbox.FlexboxLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:id="@+id/aluga_view5"
+        android:layout_height="3dp"
+        android:background="@color/titanium1"
+        app:layout_constraintTop_toBottomOf="@id/flexbox3"/>
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintTop_toBottomOf="@id/aluga_view5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:flexDirection="row"
+        app:justifyContent="space_evenly"
+        android:layout_marginBottom="10dp">
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            app:bootstrapBrand="danger"
+            app:bootstrapSize="md"
+            app:bootstrapText="Cancelar"
+            android:id="@+id/btsaluga_cancel"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            app:roundedCorners="true"/>
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            app:bootstrapBrand="success"
+            android:layout_marginTop="10dp"
+            app:bootstrapSize="md"
+            app:bootstrapText="Confirmar"
+            android:id="@+id/btsaluga_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:roundedCorners="true"/>
+    </com.google.android.flexbox.FlexboxLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

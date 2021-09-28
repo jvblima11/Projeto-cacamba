@@ -51,17 +51,18 @@ public class Main_Activity extends AppCompatActivity {
 
         contexto =Main_Activity.this;
         autenticacao = Banco.getAutenticacao();
-
         iniciaComponentes();
 
         btnverifica.setOnClickListener(v -> {
+            Intent intent = new Intent(contexto,Verifica_Activity.class);
+            startActivity(intent);
         });
 
-//        btnaluga.setOnClickListener(v ->{
-//            //fazer o aluga activity
-//            Intent intent = new Intent(contexto,Aluga_activity);
-//            startActivity(intent);
-//        });
+        btnaluga.setOnClickListener(v ->{
+            //fazer o aluga activity
+            Intent intent = new Intent(contexto,Aluga_Activity.class);
+            startActivity(intent);
+        });
 
         //barra de ação
         ActionBar actionBar =getSupportActionBar();
@@ -91,6 +92,9 @@ public class Main_Activity extends AppCompatActivity {
     }
     public  void iniciaComponentes(){
         btnaluga = findViewById(R.id.btn_aluga);
-        btnverifica = findViewById(R.id.btn_verifica);
+        btnverifica = findViewById(R.id.btn_verifica_aluga);
+        toolbar = findViewById(R.id.toolbar);
+        navigation =findViewById(R.id.barra_navegacao);
+        draw = findViewById(R.id.drawer_layout);
     }
 }
