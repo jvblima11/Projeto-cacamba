@@ -35,7 +35,7 @@ import dmax.dialog.SpotsDialog;
 
 public class Main_Activity extends AppCompatActivity {
     //Componentes da tela
-    private Button btnaluga, btnverifica;
+    private Button btnaluga, btnverifica,btnretirada;
     private NavigationView navigation;
     private MaterialToolbar toolbar;
     private DrawerLayout draw;
@@ -55,6 +55,13 @@ public class Main_Activity extends AppCompatActivity {
 
         btnverifica.setOnClickListener(v -> {
             Intent intent = new Intent(contexto,Verifica_Activity.class);
+            intent.putExtra("origem","verifica");
+            startActivity(intent);
+        });
+
+        btnretirada.setOnClickListener(v -> {
+            Intent intent = new Intent(contexto,Verifica_Activity.class);
+            intent.putExtra("origem","retirada");
             startActivity(intent);
         });
 
@@ -93,6 +100,7 @@ public class Main_Activity extends AppCompatActivity {
     public  void iniciaComponentes(){
         btnaluga = findViewById(R.id.btn_aluga);
         btnverifica = findViewById(R.id.btn_verifica_aluga);
+        btnretirada = findViewById(R.id.btn_retirada);
         toolbar = findViewById(R.id.toolbar);
         navigation =findViewById(R.id.barra_navegacao);
         draw = findViewById(R.id.drawer_layout);

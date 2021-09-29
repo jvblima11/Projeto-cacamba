@@ -8,13 +8,18 @@
     android:id="@+id/LayoutLinear"
     tools:context=".Activity.Verifica_Activity">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:background="@drawable/preco_cacamba"
-        android:id="@+id/recyclerStatus"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="20dp"/>
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:background="@drawable/preco_cacamba"-->
+<!--        android:id="@+id/listaRecy"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:padding="20dp"/>-->
+<androidx.fragment.app.FragmentContainerView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fragmento"
 
+    />
 </LinearLayout>
 
 

@@ -22,7 +22,7 @@
         <entry key="..\:/Users/jvbli/PDM/Cacambas/app/src/main/res/drawable/preco_cacamba.xml" value="0.9" />
         <entry key="..\:/Users/jvbli/PDM/Cacambas/app/src/main/res/drawable/shape.xml" value="0.1111111111111111" />
         <entry key="..\:/Users/jvbli/PDM/Cacambas/app/src/main/res/layout/Login_Activity.xml" value="0.1" />
-        <entry key="..\:/Users/jvbli/PDM/Cacambas/app/src/main/res/layout/activity_aluga.xml" value="0.25" />
+        <entry key="..\:/Users/jvbli/PDM/Cacambas/app/src/main/res/layout/activity_aluga.xml" value="0.33" />
         <entry key="..\:/Users/jvbli/PDM/Cacambas/app/src/main/res/layout/activity_cadastro.xml" value="0.20253164556962025" />
         <entry key="..\:/Users/jvbli/PDM/Cacambas/app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="..\:/Users/jvbli/PDM/Cacambas/app/src/main/res/layout/activity_login2.xml" value="0.25" />
@@ -30,13 +30,15 @@
         <entry key="..\:/Users/jvbli/PDM/Cacambas/app/src/main/res/layout/activity_verifica.xml" value="0.18" />
         <entry key="..\:/Users/jvbli/PDM/Cacambas/app/src/main/res/layout/aluga_activity.xml" value="0.11911231884057971" />
         <entry key="..\:/Users/jvbli/PDM/Cacambas/app/src/main/res/layout/esqueci_senha.xml" value="0.25" />
+        <entry key="..\:/Users/jvbli/PDM/Cacambas/app/src/main/res/layout/fragment_list.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/jvbli/PDM/Cacambas/app/src/main/res/layout/info_aluguel.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/jvbli/PDM/Cacambas/app/src/main/res/layout/layout_cabecalho.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/jvbli/PDM/Cacambas/app/src/main/res/layout/lista.xml" value="0.25" />
+        <entry key="..\:/Users/jvbli/PDM/Cacambas/app/src/main/res/layout/lista.xml" value="0.17509727626459143" />
+        <entry key="..\:/Users/jvbli/PDM/Cacambas/app/src/main/res/layout/lista_verifica.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/jvbli/PDM/Cacambas/app/src/main/res/layout/main_activity.xml" value="0.25" />
         <entry key="..\:/Users/jvbli/PDM/Cacambas/app/src/main/res/layout/reserva_login.xml" value="0.22" />
         <entry key="..\:/Users/jvbli/PDM/Cacambas/app/src/main/res/layout/reserva_main.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/jvbli/PDM/Cacambas/app/src/main/res/layout/verifica_activity.xml" value="0.11911231884057971" />
+        <entry key="..\:/Users/jvbli/PDM/Cacambas/app/src/main/res/layout/verifica_activity.xml" value="0.22" />
         <entry key="..\:/Users/jvbli/PDM/Cacambas/app/src/main/res/layout/verifica_email.xml" value="0.1" />
         <entry key="..\:/Users/jvbli/PDM/Cacambas/app/src/main/res/menu/menu_pagina_principal.xml" value="0.20416666666666666" />
       </map>
