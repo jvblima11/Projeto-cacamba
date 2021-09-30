@@ -92,8 +92,8 @@ public class Cadastro_Activity extends AppCompatActivity {
                         banco.child("users").child(user.getUid()).setValue(usuario);
                         user.sendEmailVerification().addOnSuccessListener(unused -> {
                             View view = getLayoutInflater().inflate(R.layout.verifica_email ,null);
-                            TextView  txtTitulo = findViewById(R.id.txt_verifica1);
-                            TextView  txtCorpo = findViewById(R.id.txt_verifica2);
+                            TextView  txtTitulo = view.findViewById(R.id.txt_verifica1);
+                            TextView  txtCorpo = view.findViewById(R.id.txt_verifica2);
                             BootstrapButton btnconfirm = view.findViewById(R.id.btn_verifica);
                             txtTitulo.setText("Verificação de Email");
                             txtCorpo.setText("Foi enviado uma mensagem de verificação de email para "+email);

@@ -103,6 +103,8 @@ public class FragmentRetirada extends Fragment {
                             public void onClick(DialogInterface dialog, int which) {
                                 if(cacamba.getStatus().equals("Entregue")){
                                     SolicitarRetirada(cacamba);
+                                    Toast.makeText(contexto, "Solicitação realizada", Toast.LENGTH_SHORT).show();
+
                                 }
                                 else{
                                     Toast.makeText(contexto, "Não e possível solicitar a retirada", Toast.LENGTH_SHORT).show();

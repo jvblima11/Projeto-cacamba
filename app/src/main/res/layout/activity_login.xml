@@ -43,6 +43,7 @@
         android:id="@+id/password_text"
         style="@style/edit_tex"
         android:hint="Senha"
+        android:inputType="textPassword"
         android:drawableRight="@drawable/ic_password"
         android:layout_width="330dp"
         android:layout_height="60dp"

@@ -47,35 +47,44 @@ public class Login_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        banco = Banco.getBanco();
+        //tira a Actionbar em cima da tela
+        getSupportActionBar().hide();
+
+        Componentes();
+//        banco = Banco.getBanco();
+//        btnEntrar = findViewById(R.id.btnEntrar);
+//        edtUsuario = findViewById(R.id.user_text);
+//        edtSenha = findViewById(R.id.password_text);
+//        txtCadastro = findViewById(R.id.text_cadastro);
+//        txtEsqueceu = findViewById(R.id.text_esquec);
+//        contexto = Login_Activity.this;
+
         Toast.makeText(this, banco.getRoot().toString(), Toast.LENGTH_SHORT).show();
 
-        btnEntrar = findViewById(R.id.btnEntrar);
-        edtUsuario = findViewById(R.id.user_text);
-        edtSenha = findViewById(R.id.password_text);
-        txtCadastro = findViewById(R.id.text_cadastro);
-        txtEsqueceu = findViewById(R.id.text_esquec);
-        contexto = Login_Activity.this;
-        loading = new SpotsDialog.Builder().setContext(contexto).setMessage("CARREGANDO").setCancelable(false).build();
 
-        btnEntrar.setOnClickListener(v->{
-            String usuario = edtUsuario.getText().toString();
-            String senha = edtSenha.getText().toString();
+        btnEntrar.setOnClickListener(v -> {
+      String usuario = edtUsuario.getText().toString();
+      String senha = edtSenha.getText().toString();
 
-            //Verificar campos do usuário
-            if(!usuario.isEmpty()){
-                if(!senha.isEmpty()){
-                    loading.show();
-                    autenticaUsuario(usuario,senha);
-                }
-                else{
-                    Snackbar.make(v, "Insira a senha!", Snackbar.LENGTH_SHORT).setBackgroundTint(getResources().getColor(R.color.red_300, getTheme())).show();
-                }
-            }
-            else{
-                Snackbar.make(v, "Insira o nome de usuário!", Snackbar.LENGTH_SHORT).setBackgroundTint(getResources().getColor(R.color.red_300, getTheme())).show();
-            }
-        });
+      if(!usuario.isEmpty()){
+        if(!senha.isEmpty()){
+          loading.show();
+          autenticaUsuario(usuario, senha);
+        }
+        else{
+          Snackbar.make(v, "Insira a senha!", Snackbar.LENGTH_SHORT)
+              .setBackgroundTint(getResources().getColor(R.color.red_300, getTheme()))
+              .show();
+        }
+      }
+      else{
+        Snackbar.make(v, "Insira o nome de usuário!", Snackbar.LENGTH_SHORT)
+            .setBackgroundTint(getResources().getColor(R.color.red_300, getTheme()))
+            .show();
+      }
+    });
+
+//
 
 
         txtCadastro.setOnClickListener(v -> {
@@ -206,11 +215,9 @@ public class Login_Activity extends AppCompatActivity {
         edtSenha = findViewById(R.id.password_text);
         txtEsqueceu = findViewById(R.id.text_esquec);
         txtCadastro = findViewById(R.id.text_cadastro);
-
         contexto = Login_Activity.this;
         banco =Banco.getBanco();
         autenticacao = Banco.getAutenticacao();
-
         loading = new SpotsDialog.Builder().setContext(contexto).setMessage("Entrando").build();
 
     }
