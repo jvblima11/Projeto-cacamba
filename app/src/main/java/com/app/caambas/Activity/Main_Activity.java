@@ -71,7 +71,7 @@ public class Main_Activity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        //barra de ação
+        //esconde o nome em cima
         ActionBar actionBar =getSupportActionBar();
         if(actionBar != null){
             actionBar.hide();

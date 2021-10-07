@@ -92,6 +92,18 @@
                             android:layout_marginTop="15dp"
                             />
 
+<!--                        <Button-->
+<!--                            android:id="@+id/btn_entrega"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:textAllCaps="false"-->
+<!--                            android:textSize="18dp"-->
+<!--                            android:textColor="@color/black"-->
+<!--                            android:text="Entrega"-->
+<!--                            android:backgroundTint="#4040ff"-->
+<!--                            android:layout_marginTop="15dp"-->
+<!--                            />-->
+
                     </LinearLayout>
 
                 </LinearLayout>

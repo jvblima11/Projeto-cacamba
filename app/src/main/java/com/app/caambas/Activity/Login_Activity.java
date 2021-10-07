@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import com.app.caambas.R;
 import com.beardedhen.androidbootstrap.BootstrapButton;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -59,7 +60,7 @@ public class Login_Activity extends AppCompatActivity {
 //        txtEsqueceu = findViewById(R.id.text_esquec);
 //        contexto = Login_Activity.this;
 
-        Toast.makeText(this, banco.getRoot().toString(), Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, banco.getRoot().toString(), Toast.LENGTH_SHORT).show();
 
 
         btnEntrar.setOnClickListener(v -> {
@@ -110,7 +111,8 @@ public class Login_Activity extends AppCompatActivity {
                 if(!email.isEmpty()){
                     autenticacao.sendPasswordResetEmail(email).addOnCompleteListener(task -> {
                        if(task.isSuccessful()){
-                           Toast.makeText(contexto, "Email de redefiniçãp de senha enviado!", Toast.LENGTH_SHORT).show();
+                           Toast.makeText(contexto, "Email de redefinição de senha enviado!", Toast.LENGTH_SHORT).show();
+                            finish();
                        }
                        else{
                            Toast.makeText(contexto, "Ocorreu algum erro, tentar novamente!", Toast.LENGTH_SHORT).show();
@@ -149,19 +151,30 @@ public class Login_Activity extends AppCompatActivity {
     private void autenticaUsuario(String usuario, String senha) {
         autenticacao = Banco.getAutenticacao();
         autenticacao.signInWithEmailAndPassword(usuario,senha).addOnCompleteListener(task -> {
-            if(task.isSuccessful()){
+            if(task.isSuccessful()) {
+                Log.d("login", "choegou aqui");
                 FirebaseUser usuariaLogado = Banco.getUsuarioLogado();
-                if(usuariaLogado != null){
-                    if(usuariaLogado.isEmailVerified()){
+                if (usuariaLogado != null) {
+                    if (usuariaLogado.isEmailVerified()) {
                         Log.d("facil", "autenticaUsuario: ");
                         recuperarUsuario();
 
-                    }
-                    else{
+                    } else {
                         loading.dismiss();
                         Toast.makeText(contexto, "Email incorreto!", Toast.LENGTH_SHORT).show();
                     }
                 }
+                else{
+                    loading.dismiss();
+                    Exception e = task.getException();
+                    Toast.makeText(contexto,"Email ou senha incorretos!",Toast.LENGTH_SHORT).show();
+
+                }
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Log.e("login",e.getMessage());
                 loading.dismiss();
             }
         });
